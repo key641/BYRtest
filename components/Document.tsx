@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
   },
 });
 
-// Create Document Component
-const MyDocument = () => (
+// 你需要在这里传入data
+const MyDocument = (props: any) => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
