@@ -11,7 +11,7 @@
 然后
 
 ```bash
-git clone https://git.byr.ink/byrteam-assignment/frontend-2024/ssr-pdf.git
+git clone https://git.byr.moe/ChocoLZS/ssr-pdf.git
 ```
 
 ```bash
