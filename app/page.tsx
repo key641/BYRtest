@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import datas from "./data";
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import Document from "@/components/Document";
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
           key={idx}
           className="p-3 border border-black rounded-md hover:bg-gray-200"
         >
-          浏览器访问 第{idx}个成绩单
+          浏览器访问 第{idx+1}个成绩单
         </Link>
       ))}
       {datas.map((data, idx) => (
@@ -23,8 +25,20 @@ export default function Home() {
           key={idx}
           className="p-3 border border-black rounded-md hover:bg-gray-200"
         >
-          下载第{idx}个成绩单
+          到generate下载第{idx}个svg
         </Link>
+      ))}
+      {datas.map((data, idx) => (
+        <PDFDownloadLink 
+        document={
+          <Document data={datas[idx]} />
+        } 
+        fileName="somename.pdf" 
+        key={idx}
+        className="p-3 border border-black rounded-md hover:bg-gray-200"
+        >
+          下载第{idx+1}个成绩单
+      </PDFDownloadLink>
       ))}
     </main>
   );

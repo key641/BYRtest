@@ -11,7 +11,7 @@ export default function Home({ params }: { params: { id: string } }) {
   return (
     <main className="flex h-screen flex-col items-center justify-between p-24">
       <PDFViewer>
-        <Document />
+        <Document data={data}/>
       </PDFViewer>
     </main>
   );
